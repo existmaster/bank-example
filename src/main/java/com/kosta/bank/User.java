@@ -1,17 +1,36 @@
 package com.kosta.bank;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class User {
 
     @Id @GeneratedValue
     private long id;
-    @Column
+    @Column(name = "db_name", nullable = false, unique = true)
     private String name;
+    @Column
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date timestamp;
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public long getId() {
         return id;
