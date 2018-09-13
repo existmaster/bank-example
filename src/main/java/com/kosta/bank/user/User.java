@@ -1,7 +1,11 @@
 package com.kosta.bank.user;
 
+import com.kosta.bank.account.Account;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class User {
@@ -17,6 +21,17 @@ public class User {
     private Role role;
     @Transient
     private String temp;
+
+    @OneToMany(mappedBy = "user")
+    private List<Account> accounts = new ArrayList<>();
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
 
     public String getTemp() {
         return temp;
