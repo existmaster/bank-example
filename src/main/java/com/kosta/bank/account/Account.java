@@ -12,7 +12,7 @@ public class Account {
     private String name;
     private int balance = 0;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
