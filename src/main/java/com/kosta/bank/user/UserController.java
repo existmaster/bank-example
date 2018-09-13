@@ -1,4 +1,4 @@
-package com.kosta.bank;
+package com.kosta.bank.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

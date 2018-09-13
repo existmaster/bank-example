@@ -1,4 +1,4 @@
-package com.kosta.bank;
+package com.kosta.bank.user;
 
 public enum Role {
     ADMIN("Admin"), USER("User"), MANAGER("Manager");

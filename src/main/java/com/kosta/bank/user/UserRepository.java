@@ -1,4 +1,4 @@
-package com.kosta.bank;
+package com.kosta.bank.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;

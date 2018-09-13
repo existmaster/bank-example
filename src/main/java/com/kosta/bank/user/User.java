@@ -1,4 +1,4 @@
-package com.kosta.bank;
+package com.kosta.bank.user;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -15,6 +15,16 @@ public class User {
     private Date timestamp;
     @Enumerated(EnumType.STRING)
     private Role role;
+    @Transient
+    private String temp;
+
+    public String getTemp() {
+        return temp;
+    }
+
+    public void setTemp(String temp) {
+        this.temp = temp;
+    }
 
     public Role getRole() {
         return role;
